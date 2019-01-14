@@ -20,6 +20,8 @@
     margin:0px auto;
     background: #9575CD ;
     color:floralwhite;
+    opacity:.7;
+ 
 }
 
 address{
@@ -30,4 +32,6 @@ address{
 
 .navbar-dark {
     background-color: #512DA8;
+    font-family: 'Oswald', sans-serif;
 }
+
