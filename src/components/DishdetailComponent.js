@@ -5,11 +5,12 @@
 	import { Link } from 'react-router-dom';
 	import CommentForm from './commentForm'
 	import {Loading} from './loadingC'
+	import { baseUrl } from '../shared/baseUrl';
 	function RenderDish({dish}){
 		return(
 		
 			<Card>
-				<CardImg top src={dish.image} alt={dish.name}/>
+				<CardImg top src={baseUrl + dish.image} alt={dish.name} />
 				<CardBody>
 					<CardTitle>{dish.name}</CardTitle>
 					<CardText>{dish.description}</CardText>
@@ -21,7 +22,7 @@
 	
 	
 	
-	function RenderComments({comments,addComment,dishId}){
+	function RenderComments({comments,postComment,dishId}){
 		
 		if(comments !=null)
 		return(
@@ -37,7 +38,7 @@
 	)
 	})}
 	</ul>
-	<CommentForm dishId={dishId} addComment ={addComment}/>
+	<CommentForm dishId={dishId} postComment ={postComment}/>
 	</div>
 	)
 	else 
@@ -83,7 +84,7 @@
 				</div>
 			
 					<RenderComments comments={props.comments} 
-					addComment ={props.addComment}
+					postComment ={props.postComment}
 					dishId = {props.dish.id}/>
 				
 			

@@ -17,7 +17,7 @@ class commentForm extends Component {
 		event.preventDefault();
 		this.toggleModal();
 		//console.log(this.props)
-	this.props.addComment(this.props.dishId,this.rate.value,this.name.value,this.comment.value)
+	this.props.postComment(this.props.dishId,this.rate.value,this.name.value,this.comment.value)
 		//this.props.addComment(null,this.rate.value,this.name.value,this.comment.value)
 		//console.log('heelo  ' + this.rate.value + ' ' + this.name.value + ' ' + this.comment.value);
 	};
